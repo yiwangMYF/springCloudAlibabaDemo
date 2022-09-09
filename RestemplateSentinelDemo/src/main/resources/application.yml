@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: resttemplate-sentinel-demo
+  cloud:
+    # nacos配置
+    nacos:
+      discovery:
+        server-addr: 10.23.33.34:8848
+    #sentinel配置
+    sentinel:
+      transport:
+        #sentinel监控平台地址，需要额外启动dashboard平台
+        dashboard: 127.0.0.1:7001
+        #sentinel启动的与dashboard通信的http服务端口
+        port: 8719
+
+server:
+  port: 8107
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+

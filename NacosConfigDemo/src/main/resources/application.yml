@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.23.33.34:8848
+  profiles:
+    active: prod
+
+server:
+  port: 8105
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  hystrix:
+    enabled: true
+
+

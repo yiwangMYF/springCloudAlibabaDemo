@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.23.33.34:8848
+
+server:
+  port: 8103
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
